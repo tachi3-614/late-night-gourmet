@@ -68,3 +68,5 @@ model Favorite {
   // 重複登録を防ぐ制約
   @@unique([userId, shopId])
 }
+
+
