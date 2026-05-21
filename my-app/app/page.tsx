@@ -16,7 +16,7 @@ export default async function Home({
     <main className="min-h-screen bg-slate-950 text-slate-50 p-6 md:p-12">
       <div className="max-w-5xl mx-auto">
         <h1 className="text-3xl md:text-4xl font-extrabold text-amber-400 mb-2 tracking-tight">
-          🌙 深夜飯検索アプリ（仮）
+          深夜飯検索アプリ（仮）
         </h1>
         <p className="text-slate-400 mb-8 text-sm md:text-base">
           今から開いてる！深夜の胃袋を満たす最高のグルメ検索
