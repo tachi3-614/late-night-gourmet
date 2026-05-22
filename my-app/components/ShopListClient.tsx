@@ -2,7 +2,11 @@
 
 import { useState, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
-import { createReview } from '../actions/shop' // バックエンドの投稿関数をインポート
+import { createReview } from '../actions/shop' 
+import dynamic from 'next/dynamic'
+
+// マップをSSRなしで安全に読み込む
+const Map = dynamic(() => import('./Map'), { ssr: false })
 
 type Review = {
   id: string
@@ -105,6 +109,13 @@ export default function ShopListClient({ initialShops, currentSearch = '', curre
             ))}
           </div>
         </div>
+      </div>
+
+      <div className="space-y-2">
+          <label className="block text-xs font-semibold text-slate-400 uppercase tracking-wider">
+            近くの深夜飯スポット 📍
+          </label>
+          <Map shops={initialShops} />
       </div>
 
       {isPending && (
